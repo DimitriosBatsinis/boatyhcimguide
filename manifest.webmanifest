@@ -1,0 +1,13 @@
+{
+  "name": "HCIM V3 Checklist",
+  "short_name": "HCIM V3",
+  "description": "Tickable checklist for B0aty's HCIM Guide V3.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#15120d",
+  "theme_color": "#15120d",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

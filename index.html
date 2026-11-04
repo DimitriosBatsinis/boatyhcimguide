@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>HCIM V3 Checklist</title>
+  <meta name="description" content="A tickable checklist for B0aty's HCIM Guide V3 from the Old School RuneScape Wiki, with progress saved in your browser.">
+  <meta name="theme-color" content="#17140f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f4ecdb" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    try {
+      var t = (JSON.parse(localStorage.getItem('b0aty-hcim-v3:settings') || 'null') || JSON.parse(localStorage.getItem('b0aty-hcim-v3:progress') || '{}').settings || {}).theme;
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <button id="menuBtn" class="icon-btn mobile-only" aria-label="Open episode list" aria-controls="sidebar" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="brand">
+      <a href="#intro" class="brand-home" title="About the guide" aria-label="About the guide">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 27 7v8c0 7-4.6 11.6-11 14C9.6 26.6 5 22 5 15V7z"/><path class="tick" d="m11 16 4 4 7-8"/></svg>
+      </a>
+      <label class="guide-pick">
+        <select id="guidePick" aria-label="Choose a guide">
+          <option value="b0aty">B0aty HCIM V3</option>
+          <option value="hcw">HC Worlds edition</option>
+        </select>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </label>
+    </div>
+    <div class="overall" id="overall">
+      <div class="bar" aria-hidden="true"><i id="overallBar"></i></div>
+      <span id="overallText" class="overall-text">–</span>
+    </div>
+    <button id="continueBtn" class="btn primary" title="Jump to the next step after your furthest tick (c)">
+      <span>Continue</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+    </button>
+    <button id="settingsBtn" class="icon-btn" aria-label="Settings and progress">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+    </button>
+  </header>
+
+  <div class="layout">
+    <nav id="sidebar" class="sidebar" aria-label="Episodes">
+      <div class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="search" type="search" placeholder="Search all steps" autocomplete="off" spellcheck="false" aria-label="Search all steps">
+        <kbd class="desktop-only">/</kbd>
+      </div>
+      <a class="side-link" href="#intro" id="introLink">About the guide</a>
+      <a class="side-link" href="#changes" id="changesLink" hidden>What's changed <span class="side-count" id="changesCount"></span></a>
+      <ol id="episodeList" class="episodes"></ol>
+      <p id="syncStatus" class="sync-status"></p>
+    </nav>
+    <div id="scrim" class="scrim" hidden></div>
+    <main id="main" tabindex="-1">
+      <div class="loading">Loading the guide…</div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden>
+    <span id="toastText"></span>
+    <button id="toastAction" class="btn small" hidden></button>
+  </div>
+
+  <dialog id="settings" class="sheet" aria-labelledby="settingsTitle">
+    <form method="dialog" class="sheet-head">
+      <h2 id="settingsTitle">Settings</h2>
+      <button class="icon-btn" aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </form>
+
+    <section class="sheet-sec">
+      <label class="switch"><input type="checkbox" id="setCollapse"><span>Fold banks once they're finished</span></label>
+      <label class="switch"><input type="checkbox" id="setImages"><span>Show bank screenshots</span></label>
+      <div class="field">
+        <span>Theme</span>
+        <div class="seg" role="radiogroup" aria-label="Theme">
+          <label><input type="radio" name="theme" value="auto"><span>Auto</span></label>
+          <label><input type="radio" name="theme" value="light"><span>Light</span></label>
+          <label><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet-sec">
+      <h3>Guide version</h3>
+      <p id="versionInfo" class="muted"></p>
+      <div class="row">
+        <button type="button" class="btn" id="checkNow">Check the wiki now</button>
+        <a class="btn ghost" id="wikiLink" target="_blank" rel="noopener">Open on the wiki</a>
+      </div>
+    </section>
+
+    <section class="sheet-sec">
+      <h3>Progress</h3>
+      <p id="progressInfo" class="muted"></p>
+      <div class="row">
+        <button type="button" class="btn" id="firstUnticked">First unticked step</button>
+        <button type="button" class="btn" id="exportBtn">Export backup</button>
+        <label class="btn" for="importFile">Import backup</label>
+        <input type="file" id="importFile" accept="application/json,.json" hidden>
+        <button type="button" class="btn danger" id="resetBtn">Reset…</button>
+      </div>
+      <p id="storageWarn" class="warn-text" hidden>Your browser is blocking storage, so ticks won't be saved. Turn off private browsing or allow site data.</p>
+    </section>
+
+    <section class="sheet-sec desktop-only">
+      <h3>Keyboard</h3>
+      <dl class="keys">
+        <dt><kbd>j</kbd> <kbd>k</kbd></dt><dd>Next / previous step</dd>
+        <dt><kbd>x</kbd> or <kbd>Space</kbd></dt><dd>Tick the highlighted step</dd>
+        <dt><kbd>c</kbd></dt><dd>Continue where you left off</dd>
+        <dt><kbd>[</kbd> <kbd>]</kbd></dt><dd>Previous / next episode</dd>
+        <dt><kbd>/</kbd></dt><dd>Search</dd>
+        <dt><kbd>Ctrl</kbd> <kbd>Z</kbd></dt><dd>Undo</dd>
+      </dl>
+    </section>
+
+    <p class="credits">
+      Guide written by B0aty (route by Tpapa), from the
+      <a id="creditLink" target="_blank" rel="noopener">Old School RuneScape Wiki</a>, licensed
+      <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" rel="noopener">CC BY-NC-SA 3.0</a>.
+      This is an unofficial personal checklist. Ticks are stored only in this browser.
+    </p>
+  </dialog>
+
+  <dialog id="lightbox" class="lightbox" aria-label="Screenshot">
+    <form method="dialog"><button class="lightbox-btn" aria-label="Close"><img alt=""></button></form>
+  </dialog>
+
+  <noscript><p class="noscript">This checklist needs JavaScript.</p></noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

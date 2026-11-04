@@ -1,0 +1,144 @@
+{
+  "id": "hcw",
+  "name": "HC Worlds edition",
+  "summary": "B0aty's route adapted for Hardcore Worlds (launched 4 November 2026): one life and normal XP rates, but you're not an Ironman. You can trade and use the Grand Exchange, in a separate economy that started from zero.",
+  "notes": [
+    "'''Real deaths here, though safe for a normal HCIM:''' Barbarian Assault, the Camelot training room (Knight Waves), Chambers of Xeric, the Dream World in Lunar Diplomacy, Fishing Trawler, Inferno, Magic Training Arena, Nightmare Zone, Pest Control, PvM Arena, TzHaar Fight Cave, random events, the Rogues' Den maze, and dying inside a player-owned house.",
+    "'''Still safe:''' Castle Wars, Clan Wars, Soul Wars, TzHaar Fight Pit, Emir's Arena, the Koschei fight in The Fremennik Trials, the Galvek and Glough replays, the Karamja Elite Fight Cave resurrection and the Western Provinces Elite Zulrah resurrection.",
+    "'''If you die''' you choose Reset (wipe the character and start again) or Transfer (leave for the main game for good). Either way, anything that would go to your gravestone is deleted.",
+    "'''Escape crystals''' cost 10k from Death, Rick in the Wizards' Tower or the Mysterious Stranger, and you start with one. They can only teleport you out of raids, Barbarian Assault, Pest Control, the Inferno and similar activities, and only while in your inventory. Worn and configured, they act like a ring of life everywhere else.",
+    "Last Man Standing and Bounty Hunter are disabled, so B0aty's LMS tips are struck out.",
+    "This edition only changes what the new rules force, or what trading makes clearly better. Money-making changes come next."
+  ],
+  "edits": [
+    { "intro": true, "find": "Do all Random Events except",
+      "warn": "Random events count as real deaths on Hardcore Worlds. None of them involve combat any more, but poison and venom keep ticking inside them, so don't accept one while poisoned or on low HP." },
+    { "intro": true, "find": "This guide DOES NOT include any LMS", "remove": true,
+      "why": "Last Man Standing is disabled on Hardcore Worlds." },
+    { "intro": true, "find": "Early revenants",
+      "warn": "Revenants are deep in the Wilderness. PKers on Hardcore Worlds are hunting permanent kills, and a PvP death keeps only 3 items. Very high risk." },
+    { "intro": true, "find": "LMS Rune Arrows", "remove": true,
+      "why": "LMS is disabled on Hardcore Worlds." },
+    { "intro": true, "find": "You can sell rune arrows to the Market Seller", "remove": true,
+      "why": "Only applied to LMS rune arrows." },
+    { "intro": true, "find": "Throughout play ALL lamps go to Herblore",
+      "tip": "Here you can buy herbs and secondaries on the Grand Exchange, so 70 Herblore isn't the brick wall it is for Ironmen. Lamps on Herblore still help, but buying supplies may beat herb runs. Check prices first." },
+
+    { "in": "Starting out", "find": "All Settings -> Disable level-up",
+      "before": [
+        "In Death's Office: talk to [[Death (NPC)|Death]] to accept the challenge, then hop to a Hardcore World",
+        "Take your free [[Escape crystal]]. Right-click, then Configure: wear it as a ring of life for normal play, and turn on the auto-teleport for when you go AFK and take damage"
+      ],
+      "why": "Hardcore Worlds characters start in Death's Office with one free escape crystal." },
+
+    { "in": "Bank 2", "find": "Once you have 10,000GP from Floor 3",
+      "tip": "After a Reset, the Stronghold of Security coins have a 3-day cooldown, so a reset character may not get these 10k straight away." },
+
+    { "in": "Bank 7", "find": "sell all 28 at once",
+      "after": ["Next time you pass Death's Office or the Wizards' Tower, buy 1–2 spare [[Escape crystal]]s (10k each). Never run out"],
+      "why": "Escape crystals cost only 10k here and are your safety net." },
+
+    { "in": "Bank 11", "find": "Raise Kittens as much as you want",
+      "tip": "LMS is disabled here. Death runes are also on the Grand Exchange, so check the price before committing to cat raising." },
+    { "in": "Bank 11", "find": "Talk to Mage of Zamorak in Wilderness",
+      "warn": "Wilderness: PvP death rules apply, and you'd keep only 3 items before Reset or Transfer. Bring only what this step needs, check for PKers, and be quick." },
+    { "in": "Bank 11", "find": "take the Lever to the Wilderness",
+      "warn": "Wilderness again. Look for PKers before pulling the lever and carry nothing you can't lose." },
+
+    { "in": "Bank 14", "find": "Minigame teleport to Last Man Standing/Clan Wars",
+      "tip": "LMS itself is disabled. If its teleport option is missing, use Clan Wars, which goes to the same place (Ferox Enclave). Stay inside the Enclave, because outside it is the Wilderness." },
+
+    { "in": "Bank 18", "find": "unlock Barbarian Assault teleport",
+      "tip": "Only playing Barbarian Assault is a real death. Visiting the area and unlocking the teleport is fine." },
+
+    { "in": "Bank 29", "find": "You can't die in the fights!",
+      "warn": "That's true for a normal HCIM, but this quest isn't on the Hardcore Worlds safe list. Play the fights as if a death counts: full HP, food, and leave if it goes wrong." },
+    { "in": "Bank 29", "find": "Enter Fight Caves & wait for Wave 1",
+      "warn": "The Fight Cave is a real death on Hardcore Worlds. Wave 1 is weak, but go in at full HP and leave as soon as the wave starts." },
+
+    { "in": "Bank 33", "find": "Rogues' Den to buy Graceful legs",
+      "tip": "Buying from Grace in the Rogues' Den is fine. Only the Rogues' Den maze is a real death." },
+
+    { "in": "Bank 36", "find": "Buy 1,200 Nature Runes, 500 Law Runes",
+      "tip": "Runes are also on the Grand Exchange. Use whichever is cheaper." },
+    { "in": "Bank 36", "find": "Do alchemy room until 51 Magic",
+      "warn": "The Mage Training Arena is a real death on Hardcore Worlds. The Alchemy, Telekinetic and Enchantment rooms have nothing that hurts you, but falling bones in the Graveyard room do damage, so keep your HP up there." },
+
+    { "in": "Bank 56", "find": "Go out on the Fishing Trawler",
+      "warn": "Fishing Trawler is on the real-death list here. Nothing attacks you, so the risk is very low." },
+
+    { "in": "Bank 72", "find": "THIS IS WHERE YOU HIT 750 TOTAL FOR LMS", "remove": true,
+      "why": "LMS is disabled on Hardcore Worlds." },
+
+    { "in": "Bank 81", "find": "Telegrab a Skull from the Wilderness",
+      "warn": "Low Wilderness: watch for PKers and don't bring anything you can't lose." },
+
+    { "in": "Bank 100", "find": "IF GP is no issue (LMS/Early revs) You can buy a Cannon",
+      "tip": "Here the cannon only depends on your gold: cannonballs and bars can be bought and sold on the Grand Exchange." },
+
+    { "in": "Bank 117", "find": "Head into Rogues Den",
+      "tip": "Just the den with the fire, not the maze (the maze is a real death here)." },
+
+    { "in": "Bank 118", "find": "make a raid party on the Notice Board",
+      "warn": "Chambers of Xeric is a real death on Hardcore Worlds (unlike for HCIM). Keep your escape crystal in your inventory (not worn) so it can pull you out, and only do the first-room CAs you're comfortable with." },
+
+    { "in": "Bank 139", "find": "Minigame Teleport to Pest Control",
+      "tip": "Only playing Pest Control is a real death. Teleporting to the outpost is fine." },
+
+    { "in": "Complete these skills whenever you want", "find": "70 Construction - Teak Logs from Kingdom",
+      "tip": "With trading, buy oak and teak planks on the Grand Exchange instead of the Kingdom-logs route." },
+    { "in": "Complete these skills whenever you want", "find": "70 Herblore - Do as many herbruns",
+      "tip": "You can buy herbs, unfinished potions and secondaries on the Grand Exchange and make potions directly. That's far faster than herb runs if you can afford it." },
+
+    { "in": "Training melee combat & slayer", "find": "Buy a Dragon Scimitar at Ape Atoll",
+      "tip": "Dragon scimitars are on the Grand Exchange too, so no greegree trip needed." },
+
+    { "in": "Combat Achievements", "find": "Complete Fire Cape if you're confident",
+      "warn": "A Fight Cave death is a real death here (only the Karamja Elite resurrection is safe). Go in fully prepared and practised, or leave it for later." },
+    { "in": "Combat Achievements", "find": "Fight Caves Veteran",
+      "warn": "This means completing the Fight Caves, which is a real death risk." },
+    { "in": "Combat Achievements", "find": "Facing Jad Head-on",
+      "warn": "Melee-only Fight Caves: extra risk on a one-life account." },
+    { "in": "Combat Achievements", "find": "A Near Miss",
+      "warn": "This CA means taking a Jad hit without praying. Not recommended on a one-life account." },
+
+    { "in": "Zombie Axe", "find": "Armoured Zombies drop the Zombie Axe",
+      "tip": "Zombie axes are tradeable, so you can just buy one on the Grand Exchange. LMS (for Ice Sacks) is disabled, and the Hardcore world list has no PvP worlds, so the PvP-world method doesn't apply." },
+    { "in": "Zombie Axe", "find": "SCOUT THE LADDER WITH AN ALT", "remove": true,
+      "why": "Only for the PvP-world method, which doesn't exist on Hardcore Worlds." },
+    { "in": "Zombie Axe", "find": "remember to change off PvP world if you bank", "remove": true,
+      "why": "Only for the PvP-world method, which doesn't exist on Hardcore Worlds." },
+    { "in": "Zombie Axe", "find": "Complete Knight Waves",
+      "warn": "Knight Waves (the Camelot training room) is a real death on Hardcore Worlds. It's needed for Chivalry and Piety, so go in at full HP with food, flinch carefully, and leave if it goes wrong." },
+
+    { "in": "Barrows", "find": "Jad Challenges;",
+      "warn": "Treat TzHaar-Ket-Rak's challenges as a real death risk on a one-life account." },
+    { "in": "Barrows", "find": "Chambers of Xeric: (No Falling Rocks",
+      "warn": "Chambers of Xeric is a real death on Hardcore Worlds." },
+    { "in": "Barrows", "find": "Complete barrows until you have Tank helm, Plate, Legs",
+      "tip": "Barrows pieces are tradeable, so you can buy the ones you're missing on the Grand Exchange." },
+
+    { "in": "Bank 180", "find": "Once you have your Bow of Faerdhinen",
+      "tip": "Enhanced crystal weapon seeds and crystal armour seeds are tradeable. Buying them can replace a long Gauntlet grind." },
+
+    { "in": "Bank 184", "find": "Complete Lunar Diplomacy",
+      "warn": "The Dream World fight at the end of this quest is a real death on Hardcore Worlds (it's safe for HCIM). Prepare properly before the final fight." },
+
+    { "in": "Inferno", "find": "Complete the Inferno",
+      "warn": "Inferno deaths are real on Hardcore Worlds. Keep your escape crystal in your inventory (not worn) so it can teleport you out." },
+
+    { "in": "Slayer Grind", "find": "while doing Fishing Trawler for Angler Outfit",
+      "warn": "Fishing Trawler is on the real-death list here (low risk, no combat)." },
+
+    { "in": "Bank 210", "find": "Calculate your crafting supplies required via molten glass",
+      "tip": "Molten glass is tradeable. Buying it can replace the sand mining and Superglass Make." },
+    { "in": "Bank 211", "find": "Sell Chaos & Death Runes for Onyx",
+      "tip": "You can buy onyx and zenyte shards on the Grand Exchange instead, if the price is right." },
+
+    { "in": "Zulrah", "find": "Once you have a ring of suffering",
+      "warn": "A Zulrah death is real on Hardcore Worlds unless you have the Western Provinces Elite diary resurrection." },
+
+    { "find": "CoX until Prayer Scrolls",
+      "warn": "Chambers of Xeric is a real death on Hardcore Worlds." }
+  ]
+}
