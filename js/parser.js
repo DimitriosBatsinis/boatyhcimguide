@@ -136,6 +136,7 @@ export function parseGuide(wikitext, overlay = null) {
 // following B0aty's wiki page. Each edit is one of:
 //   { find, warn }            add a warning under matching steps
 //   { find, tip }             add a tip under matching steps
+//   { find, money }           add a money-making note under matching steps
 //   { find, replace, why }    rewrite the step (original kept for reference)
 //   { find, remove, why }     strike the step out (shown, not tickable)
 //   { find, before|after: [steps], why }   insert new steps
@@ -179,6 +180,7 @@ function applyOverlay(intro, episodes, overlay) {
         const hit = { block, item: it, items: [] };
         if (edit.warn) mods.push({ kind: 'warn', text: edit.warn });
         if (edit.tip) mods.push({ kind: 'tip', text: edit.tip });
+        if (edit.money) mods.push({ kind: 'money', text: edit.money });
         if (edit.replace) { mods.push({ kind: 'changed', text: edit.why || '', original: it.text }); it.text = edit.replace; }
         if (edit.remove) { mods.push({ kind: 'removed', text: edit.why || '' }); it.was = it.kind; it.kind = 'removed'; }
         if (edit.before || edit.after) {

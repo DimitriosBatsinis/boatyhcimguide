@@ -19,6 +19,8 @@
   --diary: #2c5d8a;
   --diary-soft: #dbe7f2;
   --cursor: #c99a2a;
+  --money: #0f766e;
+  --money-soft: #d4eee8;
   --shadow: 0 1px 2px rgb(60 40 10 / .08), 0 6px 20px rgb(60 40 10 / .06);
   --top-h: 56px;
   --side-w: 290px;
@@ -47,6 +49,8 @@
     --diary: #9cc4ea;
     --diary-soft: #1e2b38;
     --cursor: #e3b341;
+    --money: #5fd0bf;
+    --money-soft: #16302c;
     --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 8px 24px rgb(0 0 0 / .25);
   }
 }
@@ -70,6 +74,8 @@
   --diary: #9cc4ea;
   --diary-soft: #1e2b38;
   --cursor: #e3b341;
+  --money: #5fd0bf;
+  --money-soft: #16302c;
   --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 8px 24px rgb(0 0 0 / .25);
 }
 
@@ -368,6 +374,8 @@ html.no-images .bank-body { grid-template-columns: minmax(0, 1fr); }
 .mod-warn b { color: var(--warn); }
 .mod-tip { border-color: var(--done); background: var(--done-soft); }
 .mod-tip b { color: var(--done); }
+.mod-money { border-color: var(--money); background: var(--money-soft); }
+.mod-money b { color: var(--money); }
 .mod-changed, .mod-added { border-color: var(--accent); background: var(--accent-soft); }
 .mod-changed b, .mod-added b { color: var(--accent); }
 .mod-note .orig { display: block; color: var(--muted); font-size: 12.5px; margin-top: 2px; }

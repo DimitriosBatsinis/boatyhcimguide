@@ -8,7 +8,10 @@
     "'''If you die''' you choose Reset (wipe the character and start again) or Transfer (leave for the main game for good). Either way, anything that would go to your gravestone is deleted.",
     "'''Escape crystals''' cost 10k from Death, Rick in the Wizards' Tower or the Mysterious Stranger, and you start with one. They can only teleport you out of raids, Barbarian Assault, Pest Control, the Inferno and similar activities, and only while in your inventory. Worn and configured, they act like a ring of life everywhere else.",
     "Last Man Standing and Bounty Hunter are disabled, so B0aty's LMS tips are struck out.",
-    "This edition only changes what the new rules force, or what trading makes clearly better. Money-making changes come next."
+    "'''Money in a new economy.''' Prices here started from zero on 4 November and will move a lot. There's no live price feed for these worlds yet, so MONEY notes say what to check, not what something is worth. Look at the Grand Exchange before you commit.",
+    "'''What tends to pay early:''' (1) items NPC shops sell at a fixed price that players pay more for on the GE, like runes: buy, hop, sell, though with only 30 Hardcore worlds shop stock is limited; (2) supplies every new account needs, like herbs, bars, cannonballs, logs and planks; (3) rare drops like Moons of Peril gear, Barrows pieces, crystal seeds and Zulrah uniques. These are worth the most in the first weeks and drop as more players get there, so sell spares quickly.",
+    "Risky but valuable content stays in, marked DANGER. Whether to do it is your call.",
+    "This edition only changes what the new rules force, what trading makes clearly better, and where money can be made. Everything else is B0aty's route, and it keeps updating from his wiki page."
   ],
   "edits": [
     { "intro": true, "find": "Do all Random Events except",
@@ -139,6 +142,43 @@
       "warn": "A Zulrah death is real on Hardcore Worlds unless you have the Western Provinces Elite diary resurrection." },
 
     { "find": "CoX until Prayer Scrolls",
-      "warn": "Chambers of Xeric is a real death on Hardcore Worlds." }
+      "warn": "Chambers of Xeric is a real death on Hardcore Worlds." },
+
+    { "intro": true, "find": "Some optional methods to make early fast GP",
+      "money": "On Hardcore Worlds, add: rune-shop stock resold on the GE, farm-run herbs, cannonballs (after Dwarf Cannon), and spare drops from Moons of Peril, Barrows and Zulrah. MONEY notes point these out as you reach them." },
+    { "in": "Bank 4", "find": "buy 1x Fire/Air/Earth Pack",
+      "money": "Shop to GE: Aubury's runes have a fixed shop price. If the GE price is clearly higher, buy extra packs, hop worlds and sell. The same works at every rune shop later in the guide." },
+    { "in": "Bank 7", "find": "sell all 28 at once",
+      "money": "Check the GE first. Eclipse reds are tradeable, and early on players may pay more than Antonius does." },
+    { "in": "Bank 34", "find": "This should net you over 1,000,000GP",
+      "money": "Pyramid tops are sold to an NPC at a fixed price, so this pays the same here, and 1M goes much further in a new economy." },
+    { "in": "Bank 34", "find": "Buy 400 Chaos Runes from Aubury",
+      "money": "If chaos runes sell for well over Aubury's price on the GE, buy extra while you're here." },
+    { "in": "Bank 36", "find": "Unlock both Rune Stores",
+      "money": "Ali's two rune stores are the best shop-to-GE stop in this part of the guide: nature, law, cosmic and death runes. Check the margin and buy extra while you're here." },
+    { "in": "Bank 75", "find": "AT THIS POINT YOU SHOULD PRIORITISE MEDIUM CONTRACTS",
+      "money": "Herb runs double as money. Every new account needs herbs, so sell the ones you don't need (high-level herbs like ranarr and snapdragon especially)." },
+    { "in": "Bank 85", "find": "Complete Dwarf Cannon",
+      "money": "You can now smith cannonballs from steel bars (35 Smithing). Everyone with a cannon needs them, which makes them a classic early-economy seller. Check the margin over steel bars." },
+    { "in": "Bank 85", "find": "IF YOU ARE PLANNING TO USE MISCELLNIA",
+      "money": "Here you can also sell Miscellania's herbs and logs, so the kingdom can pay for itself. Compare its output with the upkeep." },
+    { "in": "Bank 116", "find": "Complete Tempoross until 65 Fishing",
+      "money": "Keep the reward-pool loot. Fish and supplies sell, and early buyers pay well." },
+    { "in": "Bank 126", "find": "Set up Miscellania with the information below",
+      "money": "If money matters more than XP, set Miscellania to whatever sells best (check herb and log prices) and sell the output." },
+    { "in": "Bank 162", "find": "Solo Wintertodt until you get 12+ Magic Logs",
+      "money": "Sell the crate loot you don't need: logs, ores, herbs, seeds." },
+    { "in": "Perilous Moons", "find": "Camp Perilous Moons until Eclipse & Blood",
+      "money": "Moons of Peril gear is tradeable. Duplicate pieces are some of the best early money, so sell spares quickly, before more players arrive and prices fall." },
+    { "in": "Perilous Moons", "find": "Water orbs: Make Battlestaffs & alch",
+      "money": "Compare the GE price of the battlestaves with their alch value. Early on, players may pay more than High Alchemy does." },
+    { "in": "Barrows", "find": "Complete barrows until you have Tank helm, Plate, Legs",
+      "money": "Sell every Barrows piece you won't wear. New players all want them." },
+    { "in": "Bank 179", "find": "get your Enhanced Weapon Seed from Corrupted Gauntlet",
+      "money": "Enhanced weapon seeds and crystal armour seeds are among the most valuable early drops. Sell any extras." },
+    { "in": "Bank 182", "find": "Alch your Rune & Dragon Items from Corrupted Gauntlet",
+      "money": "Check the GE before alching. Early on, players may pay more for rune and dragon items than High Alchemy does." },
+    { "in": "Zulrah", "find": "Once you have a ring of suffering",
+      "money": "Zulrah is one of the best money makers in the game (tanzanite fang, magic fang, serpentine visage, onyx), and early drops are worth even more here. Every kill still risks a real death." }
   ]
 }

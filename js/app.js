@@ -270,7 +270,7 @@ function removedHtml(item, extra = '') {
   return `<li class="removed ${extra}"><span class="pill pill-warn">Removed</span> <span class="was">${inline(item.text, { decorate: false })}</span>${why ? `<span class="why">${inline(why, { decorate: false })}</span>` : ''}</li>`;
 }
 
-const MOD_LABEL = { warn: 'HC WORLDS RISK', tip: 'HC WORLDS', changed: 'CHANGED', added: 'ADDED' };
+const MOD_LABEL = { warn: 'DANGER', tip: 'HC WORLDS', money: 'MONEY', changed: 'CHANGED', added: 'ADDED' };
 function modNotes(item) {
   const mods = (item.mods || []).filter(m => m.kind !== 'removed' && (m.text || m.original));
   if (!mods.length) return '';

@@ -1,6 +1,6 @@
 // Offline support: the app shell is served from cache and refreshed in the
 // background. Wiki API calls and screenshots always go to the network.
-const CACHE = 'hcim-v3-shell-2';
+const CACHE = 'hcim-v3-shell-3';
 const SHELL = [
   './',
   'index.html',
